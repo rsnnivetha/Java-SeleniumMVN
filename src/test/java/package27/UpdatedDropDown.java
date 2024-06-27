@@ -27,7 +27,6 @@ public class UpdatedDropDown {
          * driver.findElement(By.id("hrefIncAdt")).click();
          * driver.findElement(By.id("hrefIncAdt")).click();
          */    //use for or while loop
-        int i=0;
         /*
          * while(i<5) {
          *
@@ -35,13 +34,14 @@ public class UpdatedDropDown {
          *
          * }
          */
-        for(i=0;i<5;i++) {
+        for(int i=0;i<5;i++) {
             driver.findElement(By.id("hrefIncAdt")).click();
         }
         driver.findElement(By.id("btnclosepaxoption")).click();
         String noOfAdults = driver.findElement(By.id("divpaxinfo")).getText();
 //        Assert.Equals(noOfAdults, "5 Adult");
         Assert.assertEquals(noOfAdults, "5 Adult");
+        driver.close();
         driver.quit();
 
 
