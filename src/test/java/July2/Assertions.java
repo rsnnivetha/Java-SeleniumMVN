@@ -14,15 +14,17 @@ public class Assertions {
 
         driver.get("http://spicejet.com"); //URL in the browser
 
-        Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+        ////div[@class="css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa"][text()="Senior Citizen"]
+
+        //Assert.assertFalse(driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa'][text()='Senior Citizen']")).isSelected());
 
 //Assert.assertFalse(true);System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
 
-        driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).click();
+        driver.findElement(By.xpath("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa'][text()='Senior Citizen']")).click();
 
-        System.out.println(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+        System.out.println(driver.findElement(By.cssSelector("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa'][text()='Senior Citizen']")).isSelected());
 
-        Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='SeniorCitizenDiscount']")).isSelected());
+        Assert.assertTrue(driver.findElement(By.cssSelector("//div[@class='css-76zvg2 r-cqee49 r-1enofrn r-1ozqkpa'][text()='Senior Citizen']")).isSelected());
 
 
     }

@@ -20,8 +20,10 @@ public class Dropdown {
 
         driver.get("http://spicejet.com"); //URL in the browser
 
- //a[@value='MAA']  - Xpath for chennai
-        // a[@value='BLR']
+ /*
+        a[@value='MAA']  - Xpath for chennai
+         a[@value='BLR']
+        */
 
         driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 
